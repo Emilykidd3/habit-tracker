@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import { ApolloProvider } from "@apollo/react-hooks"
 
 import Home from './pages/Home'
 
+import Nav from './components/Nav'
+
 function App() {
   return (
-    <ApolloProvider>
       <Router>
         <div>
           <Nav />
@@ -16,7 +16,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </ApolloProvider>
   );
 }
 
