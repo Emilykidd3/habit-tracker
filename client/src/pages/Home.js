@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment'
 
 const Home = () => {
-    const habit = {name: 'gym', days: ["2021-05-25", "2021-05-26", "2021-05-27"]}
+    const habit = {name: 'Gym', days: ["2021-05-25", "2021-05-26", "2021-05-27"]}
 
     let daysRecorded = habit.days;
     let dayGrids = [];
