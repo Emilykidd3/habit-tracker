@@ -8,14 +8,14 @@ import Nav from './components/Nav'
 
 function App() {
   return (
-      <Router>
-        <div>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
-        </div>
-      </Router>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
