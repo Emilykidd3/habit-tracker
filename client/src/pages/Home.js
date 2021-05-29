@@ -16,8 +16,8 @@ const Home = () => {
     }
     return(
         <div>
-            <div>
-                <p>{habit.name}</p>
+            <div style={{textAlign: "center"}}>
+                <h4 >{habit.name}</h4>
             </div>
             <div className="days">{dayGrids}</div>
         </div>
