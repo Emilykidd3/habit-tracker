@@ -9,7 +9,7 @@ const Home = () => {
 
   let daysRecorded = habit.days;
   let dayGrids = [];
-  for (let i = 0; i < 365; i++) {
+   for (let i = 0; i < 365; i++) {
     let dayGridDate = moment().subtract(i, "days").format("YYYY-MM-D");
     if (dayGridDate.toString() === daysRecorded[daysRecorded.length - 1]) {
       dayGrids.unshift(<div className="day day--active" key={i} />);

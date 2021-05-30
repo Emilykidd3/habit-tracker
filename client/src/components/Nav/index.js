@@ -30,6 +30,9 @@ function Navigation() {
                                     <NavLink>
                                         Home
                                     </NavLink>
+                                    <NavLink to="/newhait">
+                                        Add a Habit
+                                    </NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
