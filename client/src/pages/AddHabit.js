@@ -17,6 +17,7 @@ const AddHabit = () => {
                 <Col sm={6}>
                     <Input type="text" name="habit" id="habitName"/>
                 </Col>
+                <Button sm={2}>Add</Button>
             </FormGroup>
         </Form>
     )
