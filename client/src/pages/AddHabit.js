@@ -11,7 +11,7 @@ import {
 
 const AddHabit = () => {
     return(
-        <Form>
+        <Form style={{margin: "50px 0 0 50px"}}> 
             <FormGroup row>
                 <Label for="newHabit" sm={2}>Habit Name</Label>
                 <Col sm={6}>

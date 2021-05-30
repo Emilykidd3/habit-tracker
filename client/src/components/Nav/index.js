@@ -31,6 +31,9 @@ function Navigation() {
                 <NavItem>
                   <NavLink href="/addhabit">Add a Habit</NavLink>
                 </NavItem>
+                <NavItem>
+                  Logout
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
