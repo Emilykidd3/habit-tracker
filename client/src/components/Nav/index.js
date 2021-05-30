@@ -32,7 +32,7 @@ function Navigation() {
                   <NavLink href="/addhabit">Add a Habit</NavLink>
                 </NavItem>
                 <NavItem>
-                  Logout
+                  <NavLink href="/login">Logout</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
