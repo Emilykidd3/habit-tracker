@@ -11,17 +11,15 @@ import {
 
 const Login = () => {
     return(
-        <Form style={{margin: "50px 0 0 150px"}}> 
-            <FormGroup row>
-                <Label for="signupEmail" sm={2}>Email</Label>
-                <Col sm={6}>
+        <Form style={{marginTop: "50px"}}> 
+            <FormGroup row style={{display: "flex"}}>
+                <Col sm={6} style={{margin: "auto auto"}}>
+                    <Label for="signupEmail" sm={2}>Email</Label>
                     <Input type="text" name="email" id="email"/>
-                </Col>
-                <Label for="signupPassword" sm={2}>Password</Label>
-                <Col sm={6}>
+                    <Label for="signupPassword" sm={2}>Password</Label>
                     <Input type="text" name="password" id="password"/>
+                    <Button sm={2} style={{width: "90px", marginTop: "30px"}}>Submit</Button>
                 </Col>
-                <Button sm={2} style={{width: "90px", marginLeft: "50px"}}>Submit</Button>
             </FormGroup>
         </Form>
     )
