@@ -7,4 +7,11 @@ const typeDefs = gql`
         lastName: String
         email: String
     }
+
+    type Habit {
+        _id: ID
+        name: String
+    }
 `
+
+module.exports = typeDefs;
