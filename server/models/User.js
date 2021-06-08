@@ -30,9 +30,16 @@ userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
         this.password = await bycrypt.hash(this.password, saltRounds);
-
-        const User = mongoose.model('User', userSchema);
-
-        module.exports = User;
     }
+
+    next();
 })
+
+userSchema.methods.isCorrectPassword = async function(password) {
+    return await bycrypt.compare(password, this.password);
+}
+
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
