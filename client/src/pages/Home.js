@@ -18,7 +18,7 @@ const Home = () => {
     }
   }
   return (
-    <div>
+    <div style={{ width: "80%", margin: "auto auto" }}>
       <div style={{ textAlign: "center" }}>
         <h4>{habit.name}</h4>
       </div>
