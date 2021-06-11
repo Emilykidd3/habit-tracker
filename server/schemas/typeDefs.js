@@ -12,6 +12,11 @@ const typeDefs = gql`
         _id: ID
         name: String
     }
+
+    type Auth {
+        token: ID
+        user: User
+    }
 `
 
 module.exports = typeDefs;
