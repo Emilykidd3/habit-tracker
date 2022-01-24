@@ -79,7 +79,7 @@ h2 {
   border-radius: 10px;
 }
 
-.add-habit {
+.habit-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -89,23 +89,10 @@ h2 {
   border-bottom: 2px solid black;
 }
 
-.add-habit input {
+.habit-form input {
   padding: 10px;
   margin: 5px;
   outline: 0;
   border: 0;
   border-radius: 100px;
-}
-
-.add-habit select {
-  border-radius: 10px;
-  border: none;
-}
-
-.frequency {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
 }
