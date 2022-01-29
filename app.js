@@ -5,23 +5,41 @@ const habits = [];
 // add a habit
 function addHabit(e){
     e.preventDefault();
-    const habitName = this.querySelector("[name=habit").value;
+    const name = this.querySelector("[name=habit]").value;
     // console.log(habitName);
-    const goalNumber = this.querySelector("[name=goal]").value;
+    const goal = this.querySelector("[name=goal]").value;
     // console.log(goalNumber);
     const habit = {
-        habitName: habitName,
-        goalNumber: goalNumber,
+        name: name,
+        reps: 0,
+        goal: goal,
         completed: false,
     }
     habits.push(habit);
+
     console.log(habits);
 }
 
+
+
+
 // list habits
+function displayHabits(habit = [], habitsList) {
+    console.log(habits);
+    habitsList.innerHTML = habits.map((habit, i) => {
+        return `
+            <li>
+                <input type="checkbox" data-index=${i} id="habit${i}" ${habit.completed ? "checked" : ""} />
+                <label for="habit${i}"><span>${habit.reps}/${habit.goal} Weekly </span> ${habit.name}
+                </label>
+            </li>
+        `;
+    });
+}
 
 // toggle if achieved
 
 // delete habit
 
 addHabits.addEventListener("submit", addHabit);
+displayHabits(habits, habitsList);
