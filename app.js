@@ -31,12 +31,17 @@ function displayHabits(habit = [], habitsList) {
                 </label>
             </li>
         `;
-    });
+    }).join("");
 }
 
 // toggle if achieved
+function toggleCompleted(e){
+    console.log(e.target);
+}
 
 // delete habit
 
 addHabits.addEventListener("submit", addHabit);
+habitsList.addEventListener("click", toggleCompleted);
+
 displayHabits(habits, habitsList);
