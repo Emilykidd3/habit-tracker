@@ -7,7 +7,7 @@ function addHabit(e){
     e.preventDefault();
     const name = this.querySelector("[name=habit]").value;
     // console.log(habitName);
-    const goal = this.querySelector("[name=goal]").value;
+    const goal = +this.querySelector("[name=goal]").value;
     // console.log(goalNumber);
     const habit = {
         name: name,
@@ -43,6 +43,7 @@ function toggleCompleted(e){
     if(habits[index].reps === habits[index].goal){
         habits[index].completed = true;
     } 
+    displayHabits(habits, habitsList);
 }
 
 // delete habit
