@@ -16,16 +16,13 @@ function addHabit(e){
         completed: false,
     }
     habits.push(habit);
-
+    displayHabits(habits, habitsList);
+    this.reset();
     console.log(habits);
 }
 
-
-
-
 // list habits
 function displayHabits(habit = [], habitsList) {
-    console.log(habits);
     habitsList.innerHTML = habits.map((habit, i) => {
         return `
             <li>
