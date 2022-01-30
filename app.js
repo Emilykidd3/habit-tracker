@@ -36,7 +36,13 @@ function displayHabits(habit = [], habitsList) {
 
 // toggle if achieved
 function toggleCompleted(e){
-    console.log(e.target);
+    if(!e.target.matches("input")) return;
+    const el = e.target;
+    const index = el.dataset.index;
+    habits[index].reps+=1;
+    if(habits[index].reps === habits[index].goal){
+        habits[index].completed = true;
+    } 
 }
 
 // delete habit
