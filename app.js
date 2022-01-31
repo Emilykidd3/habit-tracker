@@ -48,6 +48,7 @@ function toggleCompleted(e){
         habits[index].completed=false;
     }
     displayHabits(habits, habitsList);
+    localStorage.setItem("habits", JSON.stringify(habits));
 }
 
 // delete habit
