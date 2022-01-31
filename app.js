@@ -42,7 +42,10 @@ function toggleCompleted(e){
     habits[index].reps+=1;
     if(habits[index].reps === habits[index].goal){
         habits[index].completed = true;
-    } 
+    } else if (habits[index].reps > habits[index].goal){
+        habits[index].reps = 0;
+        habits[index].completed=false;
+    }
     displayHabits(habits, habitsList);
 }
 
