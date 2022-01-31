@@ -1,6 +1,6 @@
 const addHabits = document.querySelector(".habit-form");
 const habitsList = document.querySelector(".habits");
-const habits = [];
+const habits = JSON.parse(localStorage.getItem("habits")) || [];
 
 // add a habit
 function addHabit(e){
