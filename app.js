@@ -17,6 +17,7 @@ function addHabit(e){
     }
     habits.push(habit);
     displayHabits(habits, habitsList);
+    localStorage.setItem("habits", JSON.stringify(habits));
     this.reset();
     console.log(habits);
 }
