@@ -30,6 +30,9 @@ function displayHabits(habit = [], habitsList) {
                 <input type="checkbox" data-index=${i} id="habit${i}" ${habit.completed ? "checked" : ""} />
                 <label for="habit${i}"><span>${habit.reps}/${habit.goal} Weekly </span> ${habit.name}
                 </label>
+                <button class="delete" data-index=${i} id="delete${i}">
+                    delete
+                </button>
             </li>
         `;
     }).join("");
@@ -55,5 +58,6 @@ function toggleCompleted(e){
 
 addHabits.addEventListener("submit", addHabit);
 habitsList.addEventListener("click", toggleCompleted);
+habitsList.addEventListener("click", deleteHabit);
 
 displayHabits(habits, habitsList);
