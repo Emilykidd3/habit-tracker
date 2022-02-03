@@ -55,6 +55,14 @@ function toggleCompleted(e){
 }
 
 // delete habit
+function deleteHabit(e){
+    if (!e.target.matches("button")) return;
+    const el = e.target;
+    const index = el.dataset.index;
+    habits.splice(index, 1);
+    displayHabits(habits, habitsList);
+    localStorage.setItem("habits", JSON.stringify(habits));
+}
 
 addHabits.addEventListener("submit", addHabit);
 habitsList.addEventListener("click", toggleCompleted);
