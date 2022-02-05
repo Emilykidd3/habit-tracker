@@ -27,7 +27,7 @@ function displayHabits(habit = [], habitsList) {
                 <input type="checkbox" data-index=${i} id="habit${i}" ${habit.completed ? "checked" : ""} />
                 <label for="habit${i}"><span>${habit.reps}/${habit.goal} Weekly </span> ${habit.name}
                 </label>
-                <button class="delete" data-index=${i} id="delete${i}">
+                <button class="delete" data-index=${i} id="delete${i}" onClick="confirmation()">
                     delete
                 </button>
             </li>
@@ -59,6 +59,13 @@ function deleteHabit(e){
     habits.splice(index, 1);
     displayHabits(habits, habitsList);
     localStorage.setItem("habits", JSON.stringify(habits));
+}
+
+function confirmation(){
+    var result = confirm("Are you sure you want to delete");
+    if (result){
+        console.log(true);
+    }
 }
 
 addHabits.addEventListener("submit", addHabit);
