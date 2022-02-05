@@ -6,9 +6,7 @@ const habits = JSON.parse(localStorage.getItem("habits")) || [];
 function addHabit(e){
     e.preventDefault();
     const name = this.querySelector("[name=habit]").value;
-    // console.log(habitName);
     const goal = +this.querySelector("[name=goal]").value;
-    // console.log(goalNumber);
     const habit = {
         name: name,
         reps: 0,
@@ -19,7 +17,6 @@ function addHabit(e){
     displayHabits(habits, habitsList);
     localStorage.setItem("habits", JSON.stringify(habits));
     this.reset();
-    console.log(habits);
 }
 
 // list habits
